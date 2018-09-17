@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+	<link rel="stylesheet"  href="./lib/tau/mobile/theme/default/tau.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+	<title>Tizen Web IDE - Template - Tizen - Tizen Web UI Framework - Single-Page</title>
+	
+	<!-- myFunction Takes the text from Text Area and will update in the list view below the button -->
+	<script>
+		function myFunction() {															
+    		var x = document.getElementById("myTextarea").value;
+    		document.getElementById("demo").innerHTML = x;
+    		
+    		var y = document.getElementById("mySelect");
+    		var option = document.createElement("option");
+    		option.text = document.getElementById("myTextarea").value;
+    		y.add(option);
+		}
+	</script>
+	
+</head>
+
+<body>
+	<div class="ui-page" id="main">
+		<div class="ui-header">
+			<h1>Write in the box </h1>
+		</div><!-- /header -->
+
+		<div class="ui-content">
+			<textarea rows="4" id="myTextarea">
+			</textarea>
+			<button type="button" onclick="myFunction()">Update Status</button>
+			
+			<div>
+			<p id="demo"></p>
+				<form>
+					<select id="mySelect">
+						<option>
+							
+						</option>
+					
+					</select>
+				
+				</form>
+			
+			</div>
+		</div><!-- /content -->
+		
+		
+	</div><!-- /page -->
+
+	<script type="text/javascript" src="./lib/tau/mobile/js/tau.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>
